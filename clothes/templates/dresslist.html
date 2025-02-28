@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Dresses{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 table-responsive">
+        <h2>Dresses</h2>
+<table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark">
+    <tr>
+        <th>DESCRIPTION</th>
+        <th>BRAND</th>
+        <th>PRICE</th>
+        <th>PURCHASE_DATE</th>
+        <th>SIZE</th>
+        <th>OCCASION</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for Y in dresss %}
+    <tr>
+        <td>{{ Y.description }}</td>
+        <td>{{ Y.brand }}</td>
+        <td>{{ Y.price }}</td>
+        <td>{{ Y.purchase_date }}</td>
+        <td>{{ Y.size }}</td>
+        <td>{{ Y.occasion }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}
